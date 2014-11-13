@@ -1,7 +1,39 @@
+$table-header-color: grey;
+$table-header-font-size: 7px;
+
+$company-name-color: #2B4DBA;
+$company-name-font-size: 0.8em;
+$company-name-font-weight: bold;
+
+$label-font-weight: normal;
+$label-font-size: 0.5em;
+
+$value-font-size: 0.7em;
+$content-value-font-size: 0.6em;
+
+$value-font-weight: bold;
+$content-font-weight: normal;
+
+
 $default-color: #fff;
+					
 
-$high-urgency-color: #B70A0A;
+$header-padding: 0px 8px 0 8px;
+$header-height: 10px;
 
-$high-urgency-revenue-color: #FCA3A3;
+$row-height: 62px;
 
-$high-urgency-stability-color: #E96565;
+$row-height-content: 38px;
+
+$alert-color-high: #B70D0D;
+$alert-color-revenue: #FB9999;
+$alert-color-stability: #FC6F6F;
+
+
+
+$alert-color-medium: #DC850B;
+$alert-color-revenue-med: #F2C180;
+$alert-color-stability-med: #F0AB4F;
+
+$graph: url(images/Graph-50.png) no-repeat 8px 50%;
+

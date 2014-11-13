@@ -1,17 +1,87 @@
-// @mixin cell ($bg-color) {
-//   background-color: $bg-color;
-//   display: inline-block;
-//   float: left;
-//   height: 62px;
-//   position: relative;
-//   width: 25%;
-// }
+// mixins go here
 
-// @mixin member-cell ($bg-color) {
-//   background-color: $bg-color;
-//   display: inline-block;
-//   float: left;
-//   height: 40px;
-//   position: relative;
-//   width: 25%;
-// }
+
+
+@mixin row-values {
+  color: $table-header-color;
+  font-size: $table-header-font-size;
+  height: $header-height;
+  padding: $header-padding;
+  text-transform: uppercase;
+  vertical-align: bottom;
+  width: 25%;
+}
+
+@mixin company-values {
+  color: $company-name-color;
+  font-size: $company-name-font-size;
+  height: $row-height;
+  font-weight: $company-name-font-weight;
+  padding: 8px;
+  text-transform: uppercase;
+  /*vertical-align: middle;*/
+  vertical-align: top;
+  width: 25%;
+}
+
+
+@mixin teammembers-values {
+  font-size: $label-font-size;
+  font-weight: $label-font-weight;
+  height: $row-height-content;
+  padding: 0 0 0 2px;
+  text-align: left;
+  text-transform: uppercase;
+  vertical-align: middle;
+  width: 25%;
+}
+
+@mixin teammembers-values-numbers {
+  font-size: $content-value-font-size;
+  font-weight: $content-font-weight;
+  height: $row-height-content;
+  padding: 8px;
+  text-align: right;
+  text-transform: uppercase;
+  vertical-align: middle;
+  width: 25%;
+}
+
+@mixin teammembers-values-numbers-alert {
+  font-size: $content-value-font-size;
+  font-weight: $value-font-weight;
+  /*height: $row-height-content;*/
+  padding: 8px;
+  text-align: right;
+  text-transform: uppercase;
+  vertical-align: middle;
+  width: 25%;
+}
+
+@mixin team-values-alert {
+  font-size: $label-font-size;
+  font-weight: $label-font-weight;
+  height: $row-height;
+  padding: 0 0 0 8px;
+  text-align: left;
+  text-transform: uppercase;
+  vertical-align: middle;
+  width: 25%;
+}
+
+@mixin urgency {
+  display: inline-block;
+  float: right;
+  overflow: hidden;
+  position: relative;
+  text-transform: uppercase;
+}
+
+@mixin value {
+  font-size: $value-font-size;
+  font-weight: $value-font-weight;
+  height: $row-height;
+  padding: 8px;
+  vertical-align: top;
+  width: 25%;
+}

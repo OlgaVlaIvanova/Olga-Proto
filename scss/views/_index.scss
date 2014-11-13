@@ -1,130 +1,433 @@
 /* styles for the index page go here */
 
+html {
+  height: 100%;
+}
+
 body {
   font-family: Arial, Helvetica, Verdana, sans-serif;
+  height: 100%;
+  padding: 0 20px;
+  width: 100%;
 }
 
-div#container {
+table {
+  border-collapse: separate;
+  border-spacing: 0 2px;
   margin: 10px auto;
   max-width: 960px;
-}
+  width: 100%;
 
-li.team-row, li.member-row {
-  overflow: hidden;
-}
+  tr {
+    /*overflow: hidden;*/
 
-li.team-row>div, li.member-row>div {
-  float: left;
-  width: 25%;
-}
+    &.body-table th.header-company {
+      padding-top: 20px;
+    }
+
+    &.row-first td.cell-first {
+      border-top: solid 4px white;
+    }
+
+    &.row-last td.cell-last {
+      border-bottom: solid 4px white;
+    }
 
 
-//Teams
-li.team-row {
-  margin-bottom: 4px;
+    th.header-company {
+      @include row-values;
+      text-align: left;
+    }
 
-  &>div {
-    height:  62px;
-  }
 
-  &.high div.team-name {
-    background-color: $default-color *0.01;
-  }
+    th.header {
+      @include row-values;  
+      text-align: right;
+    }
+    
 
-  &.medium, &.low {
+    th.header-double {
+      @include row-values;  
+        
+        div.header-stable-teams {
+          display: inline-block;
+          float: left;
+          overflow: hidden;
+          position: relative;
+          text-align: left;
+        }
 
-    div.team-revenue {
+        div.header-urgency {
+          /*display: inline-block;*/
+          float: right;
+          overflow: hidden;
+          position: relative;
+        
+        } 
+
+    }
+
+  
+    td.company {
+      @include company-values;
+      background-color: $default-color *0.9;
+      text-align: left;
+    }
+
+
+    td.revenue-high {
+      @include value;
       background-color: $default-color *0.95;
+      color: $default-color *0.1;
+      text-align: right;
     }
 
-    div.team-stability {
-      background-color: $default-color *0.98;
+    td.revenue-medium {
+      @include value;
+      background-color: $default-color *0.95;
+      color: $default-color *0.4;
+      text-align: right;
     }
 
-    div.team-urgency {
+
+    td.revenue-low {
+      @include value;
+      background-color: $default-color *0.95;
+      color: $default-color *0.65;
+      text-align: right;
+    }
+
+    td.content-revenue-high {
+      @include teammembers-values-numbers-alert;
+      background-color: $default-color *0.95;
+      color: $default-color *0.1;
+      text-align: right;
+    }
+
+    td.content-revenue-medium{
+      @include teammembers-values-numbers-alert;
+      background-color: $default-color *0.95;
+      color: $default-color *0.4;
+      text-align: right;
+    }
+
+    td.content-revenue-low {
+      @include teammembers-values-numbers;
+      background-color: $default-color *0.95;
+      color: $default-color *0.65;
+      text-align: right;
+    }
+
+    td.stability-high {
+      @include value;
+      background-color: $default-color *0.93;
+      color: $default-color *0.1;
+      text-align: right;
+    }
+
+    td.stability-medium {
+      @include value;
+      background-color: $default-color *0.93;
+      color: $default-color *0.4;
+      text-align: right;
+    }
+
+    td.stability-low {
+      @include value;
+      background-color: $default-color *0.93;
+      color: $default-color *0.65;
+      text-align: right;
+    }
+
+    td.content-stability-high {
+      @include teammembers-values-numbers-alert;
+      background-color: $default-color *0.93;
+      color: $default-color *0.1;
+      text-align: right;
+    }
+
+
+    td.content-stability-medium {
+      @include teammembers-values-numbers-alert;
+      background-color: $default-color *0.93;
+      color: $default-color *0.4;
+      text-align: right;
+    }
+
+    td.content-stability-low {
+      @include teammembers-values-numbers;
+      background-color: $default-color *0.93;
+      color: $default-color *0.65;
+      text-align: right;
+    }
+
+    td.content-urgency-row {
+      @include teammembers-values-numbers;
       background-color: $default-color *0.9;
     }
-  }
 
-
-  &.medium div.team-name {
-    background-color: $default-color *0.75;
-  }
-
-  &.low div.team-name {
-    background-color: $default-color *0.9;
-  }
-
-  &.selected {
-
-    div.team-revenue {
-      background-color: $default-color *0.8;
+    td.content-urgency-row-alert {
+      @include teammembers-values-numbers-alert;
+      background-color: $default-color *0.9;
     }
 
-    div.team-stability {
-      background-color: $default-color *0.7;
+    td.urgency-row {
+      @include value;
+      background-color: $default-color *0.9;
+
+      div.amount-medium {
+        color: $default-color *0.4;
+        display: inline-block;
+        font-weight: bold;
+        /*text-align: left;*/
+      }
+
+        div.total-amount {
+          color: $default-color *0.5;
+          display: inline-block;
+          font-weight: normal;
+        }
+      
+
+      div.urgency-high {
+        @include urgency;
+        color: $default-color *0.1;
+      } 
+
+      div.urgency-medium {
+        @include urgency; 
+        color: $default-color *0.4;
+      }
+
+      div.urgency-low {
+        @include urgency;
+        color: $default-color *0.65;
+      }
+
+
+      div.amount-high {
+        color: $default-color *0.1;
+        display: inline-block;
+        font-weight: bold;
+      }
+      
+      div.amount-medium {
+        color: $default-color *0.4;
+        display: inline-block;
+        font-weight: bold;
+      }
     }
 
-    div.team-urgency {
-      background-color: $default-color *0.75;
+    
+    td.content-urgency-row div.urgency-medium {
+      @include urgency; 
+      color: $default-color *0.4;
+    }
+
+    td.content-urgency-row div.urgency-low {
+      @include urgency;
+      color: $default-color *0.65;
+    }
+
+
+    img.graph {
+      float: left;
+      overflow: hidden;
+      padding-top: 16px;
+      position: relative;
+    }
+
+    img.photo {
+      float: left;
+      overflow: hidden;
+      margin-right: 4px;
+      position: relative;
+    }
+
+  }
+
+tr.content-row-medium td.content-urgency-row-alert div.urgency-medium {
+        @include urgency; 
+        color: $default-color *0.4;
+    }
+
+  tr {     
+
+    td.label-high {
+      @include team-values-alert;
+      background-color: $default-color *0.01;
+      color: $default-color *0.98;
+    }
+
+    td.label-medium {
+      @include team-values-alert;
+      background-color: $default-color *0.4;
+      color: $default-color *0.98;
+    }
+
+    td.label-low {
+      @include team-values-alert;
+      background-color: $default-color *0.9;
+      color: $default-color *0.35;
+    }
+
+    td.content-label-high {
+      @include teammembers-values;
+      background-color: $alert-color-high;
+      color: $default-color *0.98;
+    }   
+
+    td.content-label-medium {
+      @include teammembers-values;
+      background-color: $alert-color-medium;
+      color: $default-color *0.98;
+    }
+
+    td.content-label-low {
+      @include teammembers-values;
+      background-color: $default-color *0.9;
+      color: $default-color *0.35;
+    }
+
+      div.manager {
+        text-transform: none;
+        line-height: 20px;
+      }
+
+      div.function {
+        text-transform: none;
+        line-height: 14px;
+      }
+
+        div.name {
+          display: inline-block;
+          line-height: 20px;
+          text-transform: none;
+        }
+  } 
+
+ /* tr.row:hover td:nth-child(3) {
+    border: 1px solid red;
+  }*/
+
+    tr.row-high:hover td {
+    
+    &:nth-child(1){
+      background-color: $default-color *0.01;
+    }
+
+    &:nth-child(2){
+      background: $graph;
+      background-color: $default-color *0.9;
+    }
+
+    &:nth-child(3){
+      background: $graph;
+      background-color: $default-color *0.88;
+    }
+
+    &:nth-child(4){
+      background-color: $default-color *0.84;
+    }
+  }
+
+  tr.row-medium:hover td {
+
+    &:nth-child(1){
+      background-color: $default-color *0.3;
+    }
+
+    &:nth-child(2){
+      background: $graph;
+      background-color: $default-color *0.9;
+    }
+
+    &:nth-child(3){
+      background: $graph;
+      background-color: $default-color *0.88;
+    }
+
+    &:nth-child(4){
+      background-color: $default-color *0.84;
+    }
+  }
+
+  tr.row-low:hover td {
+
+    &:nth-child(1){
+      background-color: $default-color *0.84;
+    }
+
+    &:nth-child(2){
+      background: $graph;
+      background-color: $default-color *0.9;
+    }
+
+    &:nth-child(3){
+      background: $graph;
+      background-color: $default-color *0.88;
+    }
+
+    &:nth-child(4){
+      background-color: $default-color *0.84;
+    }
+  }
+
+
+  tr.content-row-high:hover td {
+
+    &:nth-child(2){
+      background-color: $alert-color-revenue;
+      color: $default-color *0.99; 
+    }
+
+    &:nth-child(3){
+      background-color: $alert-color-stability;
+      color: $default-color *0.99; 
+    }
+
+    &:nth-child(4){
+      background-color: $alert-color-high;
+      color: $default-color *0.99; 
+    }
+  }
+
+  tr.content-row-medium:hover td {
+
+    &:nth-child(2){
+      background-color: $alert-color-revenue-med;
+      color: $default-color *0.99; 
+    }
+
+    &:nth-child(3){
+      background-color: $alert-color-stability-med;
+      color: $default-color *0.99; 
+    }
+
+    &:nth-child(4){
+      background-color: $alert-color-medium;
+      color: $default-color *0.99; 
     }
   }
 
 }
 
-//Teammember row 
-li.member-row {
-  margin-top: 1px;
-}
+/*  //////////////////////////////      a       /////////////////////////////////  */ 
+ 
+a {
+cursor: pointer;
+color: $default-color *0.99;}  
 
-li.member-row>div {
-  height:  40px;
-}
+/*a.black {
+cursor: pointer;
+color: black;
+font-weight: normal;} */
 
-// li.member-row:first-child {
-//   margin-top: 1px;
-// }
+a:link {
+text-decoration: none;}       
 
-// li.member-row:last-child {
-//   margin-bottom: 4px;
-// }
+/*a:hover {
+color: red;}*/    
 
-li.member-row {
-
-  &.high div.member-name {
-    background-color: $high-urgency-color;
-  }
-
-  div.member-revenue {
-    background-color: $default-color *0.95;
-  }
-
-  div.member-stability {
-    background-color: $default-color *0.98;
-  }
-
-  div.member-urgency {
-    background-color: $default-color *0.9;
-  }
-
-  &.selected {
-
-    div.member-revenue {
-      background-color: $high-urgency-revenue-color;
-    }
-
-    div.member-stability {
-      background-color: $high-urgency-stability-color;
-    }
-
-    div.member-urgency {
-      background-color: $high-urgency-color;
-    }
-  }
-}
-
-li.member-opening div.member-details {
-  background-color: $default-color *0.9;
-  border: 1px solid $high-urgency-color;
-  height: 160px;
-}
+/*a:active {
+color: #006A52;}*/
