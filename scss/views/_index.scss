@@ -9,118 +9,112 @@ div#container {
   max-width: 960px;
 }
 
-li {
+li.team-row, li.member-row {
   overflow: hidden;
 }
 
-li.team-value {
-  margin-bottom: 4px;
-}
-
-  // %cell {
-  //   display: inline-block;
-  //   float: left;
-  //   height: 62px;
-  //   overflow: hidden;
-  //   position: relative;
-  //   width: 25%;
-  // }
-
-
-li.members-value {
-  // margin: 0 auto;
-  // width: 952px;
-}
-
-
-li.members-row {
-  margin-top: 1px;
-}
-
-// li.member-opening {
-
-// }
-
-//Teams
- 
-li.team-height>div { 
-  height: 62px;
-}
-
-li.team-value>div, li.members-row>div, li.members-value>div {
-  display: inline-block;
+li.team-row>div, li.member-row>div {
   float: left;
-  position: relative;
   width: 25%;
 }
 
-div.team-name-high-urgency {
+
+//Teams
+li.team-row {
+  margin-bottom: 4px;
+}
+
+li.team-row>div {
+  height:  62px;
+}
+
+li.team-row.high div.team-name {
   background-color: $default-color *0.01;
-  // @include cell ($default-color *0.001);
-  // @extend %cell;
-  // background-color: $default-color *0.01;
 }
 
-div.team-name-low-urgency {
-  background-color: $default-color *0.01;
-}
-
-div.team-revenue {
-  background-color: $default-color *0.8;
-}
-   
-div.team-stability {
-  background-color: $default-color *0.7;
-}
-
-div.team-urgency {
+li.team-row.medium div.team-name {
   background-color: $default-color *0.75;
 }
 
-//Team-members
-
-// targets all divs inside of li.members-height
-li.members-height>div {
-  height: 40px;
+li.team-row.low div.team-name {
+  background-color: $default-color *0.9;
 }
 
-div.member-name-high-urgency {
+li.team-row.selected div.team-revenue {
+  background-color: $default-color *0.8;
+}
+
+li.team-row.medium div.team-revenue, li.team-row.low div.team-revenue {
+  background-color: $default-color *0.95;
+}
+   
+li.team-row.selected div.team-stability {
+  background-color: $default-color *0.7;
+}
+
+li.team-row.medium div.team-stability,li.team-row.low div.team-stability {
+  background-color: $default-color *0.98;
+}
+
+li.team-row.selected div.team-urgency {
+  background-color: $default-color *0.75;
+}
+
+li.team-row.medium div.team-urgency,li.team-row.low div.team-urgency {
+  background-color: $default-color *0.9;
+}
+
+//Teammember row 
+li.member-row {
+  margin-top: 1px;
+}
+
+li.member-row>div {
+  height:  40px;
+}
+
+// li.member-row:first-child {
+//   margin-top: 1px;
+// }
+
+// li.member-row:last-child {
+//   margin-bottom: 4px;
+// }
+
+li.member-row.high div.member-name {
   background-color: $high-urgency-color;
 }
 
-div.member-revenue {
+li.member-row div.member-revenue {
+  background-color: $default-color *0.95;
+}
+
+li.member-row div.member-stability {
+  background-color: $default-color *0.98;
+}
+
+li.member-row div.member-urgency {
+  background-color: $default-color *0.9;
+}
+
+//Teammember row selected
+li.member-row.selected div.member-revenue {
   background-color: $high-urgency-revenue-color;
 }
 
-div.member-stability {
+li.member-row.selected div.member-stability {
   background-color: $high-urgency-stability-color;
 }
 
-div.member-urgency {
+li.member-row.selected  div.member-urgency {
   background-color: $high-urgency-color;
 }
 
 div.member-details {
   background-color: $default-color *0.9;
   border: 1px solid $high-urgency-color;
-  display: inline-block;
-  float: left;
   height: 160px;
-  margin: auto 0;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-}
-//Teammembers list after member-opening
-li.members-row div.member-revenue {
-  background-color: $default-color *0.95;
 }
 
-li.members-row div.member-stability {
-  background-color: $default-color *0.98;
-}
 
-li.members-row div.member-urgency {
-  background-color: $default-color *0.9;
-}
 

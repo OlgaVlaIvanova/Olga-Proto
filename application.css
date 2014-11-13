@@ -73,88 +73,96 @@ div#container {
   max-width: 960px; }
 
 /* line 12, scss/views/_index.scss */
-li {
+li.team-row, li.member-row {
   overflow: hidden; }
 
 /* line 16, scss/views/_index.scss */
-li.team-value {
-  margin-bottom: 4px; }
-
-/* line 36, scss/views/_index.scss */
-li.members-row {
-  margin-top: 1px; }
-
-/* line 46, scss/views/_index.scss */
-li.team-height > div {
-  height: 62px; }
-
-/* line 50, scss/views/_index.scss */
-li.team-value > div, li.members-row > div, li.members-value > div {
-  display: inline-block;
+li.team-row > div, li.member-row > div {
   float: left;
-  position: relative;
   width: 25%; }
 
-/* line 57, scss/views/_index.scss */
-div.team-name-high-urgency {
+/* line 23, scss/views/_index.scss */
+li.team-row {
+  margin-bottom: 4px; }
+
+/* line 27, scss/views/_index.scss */
+li.team-row > div {
+  height: 62px; }
+
+/* line 31, scss/views/_index.scss */
+li.team-row.high div.team-name {
   background-color: #020202; }
 
-/* line 64, scss/views/_index.scss */
-div.team-name-low-urgency {
-  background-color: #020202; }
-
-/* line 68, scss/views/_index.scss */
-div.team-revenue {
-  background-color: #cccccc; }
-
-/* line 72, scss/views/_index.scss */
-div.team-stability {
-  background-color: #b2b2b2; }
-
-/* line 76, scss/views/_index.scss */
-div.team-urgency {
+/* line 35, scss/views/_index.scss */
+li.team-row.medium div.team-name {
   background-color: #bfbfbf; }
 
-/* line 83, scss/views/_index.scss */
-li.members-height > div {
+/* line 39, scss/views/_index.scss */
+li.team-row.low div.team-name {
+  background-color: #e5e5e5; }
+
+/* line 43, scss/views/_index.scss */
+li.team-row.selected div.team-revenue {
+  background-color: #cccccc; }
+
+/* line 47, scss/views/_index.scss */
+li.team-row.medium div.team-revenue, li.team-row.low div.team-revenue {
+  background-color: #f2f2f2; }
+
+/* line 51, scss/views/_index.scss */
+li.team-row.selected div.team-stability {
+  background-color: #b2b2b2; }
+
+/* line 55, scss/views/_index.scss */
+li.team-row.medium div.team-stability, li.team-row.low div.team-stability {
+  background-color: #f9f9f9; }
+
+/* line 59, scss/views/_index.scss */
+li.team-row.selected div.team-urgency {
+  background-color: #bfbfbf; }
+
+/* line 63, scss/views/_index.scss */
+li.team-row.medium div.team-urgency, li.team-row.low div.team-urgency {
+  background-color: #e5e5e5; }
+
+/* line 68, scss/views/_index.scss */
+li.member-row {
+  margin-top: 1px; }
+
+/* line 72, scss/views/_index.scss */
+li.member-row > div {
   height: 40px; }
 
-/* line 87, scss/views/_index.scss */
-div.member-name-high-urgency {
+/* line 84, scss/views/_index.scss */
+li.member-row.high div.member-name {
   background-color: #B70A0A; }
 
-/* line 91, scss/views/_index.scss */
-div.member-revenue {
+/* line 88, scss/views/_index.scss */
+li.member-row div.member-revenue {
+  background-color: #f2f2f2; }
+
+/* line 92, scss/views/_index.scss */
+li.member-row div.member-stability {
+  background-color: #f9f9f9; }
+
+/* line 96, scss/views/_index.scss */
+li.member-row div.member-urgency {
+  background-color: #e5e5e5; }
+
+/* line 101, scss/views/_index.scss */
+li.member-row.selected div.member-revenue {
   background-color: #FCA3A3; }
 
-/* line 95, scss/views/_index.scss */
-div.member-stability {
+/* line 105, scss/views/_index.scss */
+li.member-row.selected div.member-stability {
   background-color: #E96565; }
 
-/* line 99, scss/views/_index.scss */
-div.member-urgency {
+/* line 109, scss/views/_index.scss */
+li.member-row.selected div.member-urgency {
   background-color: #B70A0A; }
 
-/* line 103, scss/views/_index.scss */
+/* line 113, scss/views/_index.scss */
 div.member-details {
   background-color: #e5e5e5;
   border: 1px solid #B70A0A;
-  display: inline-block;
-  float: left;
-  height: 160px;
-  margin: auto 0;
-  overflow: hidden;
-  position: relative;
-  width: 100%; }
-
-/* line 115, scss/views/_index.scss */
-li.members-row div.member-revenue {
-  background-color: #f2f2f2; }
-
-/* line 119, scss/views/_index.scss */
-li.members-row div.member-stability {
-  background-color: #f9f9f9; }
-
-/* line 123, scss/views/_index.scss */
-li.members-row div.member-urgency {
-  background-color: #e5e5e5; }
+  height: 160px; }
