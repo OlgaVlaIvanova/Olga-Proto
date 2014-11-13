@@ -1,0 +1,161 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* line 6, scss/theme/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+/* line 27, scss/theme/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+/* line 31, scss/theme/_reset.scss */
+body {
+  line-height: 1; }
+
+/* line 34, scss/theme/_reset.scss */
+ol, ul {
+  list-style: none; }
+
+/* line 37, scss/theme/_reset.scss */
+blockquote, q {
+  quotes: none; }
+
+/* line 40, scss/theme/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+/* line 45, scss/theme/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 7, scss/theme/_theme.scss */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 13, scss/theme/_theme.scss */
+body {
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
+
+/* styles for the index page go here */
+/* line 3, scss/views/_index.scss */
+body {
+  font-family: Arial, Helvetica, Verdana, sans-serif; }
+
+/* line 7, scss/views/_index.scss */
+div#container {
+  margin: 10px auto;
+  max-width: 960px; }
+
+/* line 12, scss/views/_index.scss */
+li {
+  overflow: hidden; }
+
+/* line 16, scss/views/_index.scss */
+li.team-value {
+  margin-bottom: 4px; }
+
+/* line 36, scss/views/_index.scss */
+li.members-row {
+  margin-top: 1px; }
+
+/* line 47, scss/views/_index.scss */
+li.team-value > div {
+  display: inline-block;
+  float: left;
+  height: 62px;
+  position: relative;
+  width: 25%; }
+
+/* line 55, scss/views/_index.scss */
+div.team-name-high-urgency {
+  background-color: #020202; }
+
+/* line 62, scss/views/_index.scss */
+div.team-name-low-urgency {
+  background-color: #020202; }
+
+/* line 66, scss/views/_index.scss */
+div.team-revenue {
+  background-color: #cccccc; }
+
+/* line 70, scss/views/_index.scss */
+div.team-stability {
+  background-color: #b2b2b2; }
+
+/* line 74, scss/views/_index.scss */
+div.team-urgency {
+  background-color: #bfbfbf; }
+
+/* line 80, scss/views/_index.scss */
+li.members-row > div, li.members-value > div {
+  display: inline-block;
+  float: left;
+  height: 40px;
+  position: relative;
+  width: 25%; }
+
+/* line 88, scss/views/_index.scss */
+div.member-name-high-urgency {
+  background-color: #B70A0A; }
+
+/* line 94, scss/views/_index.scss */
+div.member-revenue {
+  background-color: #FCA3A3; }
+
+/* line 98, scss/views/_index.scss */
+div.member-stability {
+  background-color: #E96565; }
+
+/* line 102, scss/views/_index.scss */
+div.member-urgency {
+  background-color: #B70A0A; }
+
+/* line 106, scss/views/_index.scss */
+div.member-details {
+  background-color: #e5e5e5;
+  border: 1px solid #B70A0A;
+  display: inline-block;
+  float: left;
+  height: 160px;
+  margin: auto 0;
+  overflow: hidden;
+  position: relative;
+  width: 100%; }
+
+/* line 118, scss/views/_index.scss */
+li.members-row div.member-revenue {
+  background-color: #f2f2f2; }
+
+/* line 122, scss/views/_index.scss */
+li.members-row div.member-stability {
+  background-color: #f2f2f2; }
+
+/* line 126, scss/views/_index.scss */
+li.members-row div.member-urgency {
+  background-color: #e5e5e5; }

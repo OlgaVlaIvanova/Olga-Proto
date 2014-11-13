@@ -1,0 +1,129 @@
+/* styles for the index page go here */
+
+body {
+  font-family: Arial, Helvetica, Verdana, sans-serif;
+}
+
+div#container {
+  margin: 10px auto;
+  max-width: 960px;
+}
+
+li {
+  overflow: hidden;
+}
+
+li.team-value {
+  margin-bottom: 4px;
+}
+
+  // %cell {
+  //   display: inline-block;
+  //   float: left;
+  //   height: 62px;
+  //   overflow: hidden;
+  //   position: relative;
+  //   width: 25%;
+  // }
+
+
+li.members-value {
+  // margin: 0 auto;
+  // width: 952px;
+}
+
+
+li.members-row {
+  margin-top: 1px;
+}
+
+// li.member-opening {
+
+// }
+
+//Teams
+
+// .team-name-high-urgency, .team-name-low-urgency, .team-revenue, .team-stability, .team-urgency 
+li.team-value>div { 
+  display: inline-block;
+  float: left;
+  height: 62px;
+  position: relative;
+  width: 25%;
+}
+
+div.team-name-high-urgency {
+  background-color: $default-color *0.01;
+  // @include cell ($default-color *0.001);
+  // @extend %cell;
+  // background-color: $default-color *0.01;
+}
+
+div.team-name-low-urgency {
+  background-color: $default-color *0.01;
+}
+
+div.team-revenue {
+  background-color: $default-color *0.8;
+}
+   
+div.team-stability {
+  background-color: $default-color *0.7;
+}
+
+div.team-urgency {
+  background-color: $default-color *0.75;
+}
+
+//Team-members
+// targets all divs inside of li.members-row
+li.members-row>div, li.members-value>div {
+  display: inline-block;
+  float: left;
+  height: 40px;
+  position: relative;
+  width: 25%;
+}
+
+div.member-name-high-urgency {
+  background-color: $high-urgency-color;
+  // @extend %cell;
+  // background-color: $default-color *0.01;
+}
+
+div.member-revenue {
+  background-color: $high-urgency-revenue-color;
+}
+
+div.member-stability {
+  background-color: $high-urgency-stability-color;
+}
+
+div.member-urgency {
+  background-color: $high-urgency-color;
+}
+
+div.member-details {
+  background-color: $default-color *0.9;
+  border: 1px solid $high-urgency-color;
+  display: inline-block;
+  float: left;
+  height: 160px;
+  margin: auto 0;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+//Teammembers list after member-opening
+li.members-row div.member-revenue {
+  background-color: $default-color *0.95;
+}
+
+li.members-row div.member-stability {
+  background-color: $default-color *0.95;
+}
+
+li.members-row div.member-urgency {
+  background-color: $default-color *0.9;
+}
+
