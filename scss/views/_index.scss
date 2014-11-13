@@ -22,46 +22,54 @@ li.team-row>div, li.member-row>div {
 //Teams
 li.team-row {
   margin-bottom: 4px;
-}
 
-li.team-row>div {
-  height:  62px;
-}
+  &>div {
+    height:  62px;
+  }
 
-li.team-row.high div.team-name {
-  background-color: $default-color *0.01;
-}
+  &.high div.team-name {
+    background-color: $default-color *0.01;
+  }
 
-li.team-row.medium div.team-name {
-  background-color: $default-color *0.75;
-}
+  &.medium, &.low {
 
-li.team-row.low div.team-name {
-  background-color: $default-color *0.9;
-}
+    div.team-revenue {
+      background-color: $default-color *0.95;
+    }
 
-li.team-row.selected div.team-revenue {
-  background-color: $default-color *0.8;
-}
+    div.team-stability {
+      background-color: $default-color *0.98;
+    }
 
-li.team-row.medium div.team-revenue, li.team-row.low div.team-revenue {
-  background-color: $default-color *0.95;
-}
-   
-li.team-row.selected div.team-stability {
-  background-color: $default-color *0.7;
-}
+    div.team-urgency {
+      background-color: $default-color *0.9;
+    }
+  }
 
-li.team-row.medium div.team-stability,li.team-row.low div.team-stability {
-  background-color: $default-color *0.98;
-}
 
-li.team-row.selected div.team-urgency {
-  background-color: $default-color *0.75;
-}
+  &.medium div.team-name {
+    background-color: $default-color *0.75;
+  }
 
-li.team-row.medium div.team-urgency,li.team-row.low div.team-urgency {
-  background-color: $default-color *0.9;
+  &.low div.team-name {
+    background-color: $default-color *0.9;
+  }
+
+  &.selected {
+
+    div.team-revenue {
+      background-color: $default-color *0.8;
+    }
+
+    div.team-stability {
+      background-color: $default-color *0.7;
+    }
+
+    div.team-urgency {
+      background-color: $default-color *0.75;
+    }
+  }
+
 }
 
 //Teammember row 
@@ -81,40 +89,42 @@ li.member-row>div {
 //   margin-bottom: 4px;
 // }
 
-li.member-row.high div.member-name {
-  background-color: $high-urgency-color;
+li.member-row {
+
+  &.high div.member-name {
+    background-color: $high-urgency-color;
+  }
+
+  div.member-revenue {
+    background-color: $default-color *0.95;
+  }
+
+  div.member-stability {
+    background-color: $default-color *0.98;
+  }
+
+  div.member-urgency {
+    background-color: $default-color *0.9;
+  }
+
+  &.selected {
+
+    div.member-revenue {
+      background-color: $high-urgency-revenue-color;
+    }
+
+    div.member-stability {
+      background-color: $high-urgency-stability-color;
+    }
+
+    div.member-urgency {
+      background-color: $high-urgency-color;
+    }
+  }
 }
 
-li.member-row div.member-revenue {
-  background-color: $default-color *0.95;
-}
-
-li.member-row div.member-stability {
-  background-color: $default-color *0.98;
-}
-
-li.member-row div.member-urgency {
-  background-color: $default-color *0.9;
-}
-
-//Teammember row selected
-li.member-row.selected div.member-revenue {
-  background-color: $high-urgency-revenue-color;
-}
-
-li.member-row.selected div.member-stability {
-  background-color: $high-urgency-stability-color;
-}
-
-li.member-row.selected  div.member-urgency {
-  background-color: $high-urgency-color;
-}
-
-div.member-details {
+li.member-opening div.member-details {
   background-color: $default-color *0.9;
   border: 1px solid $high-urgency-color;
   height: 160px;
 }
-
-
-

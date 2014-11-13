@@ -84,85 +84,69 @@ li.team-row > div, li.member-row > div {
 /* line 23, scss/views/_index.scss */
 li.team-row {
   margin-bottom: 4px; }
+  /* line 26, scss/views/_index.scss */
+  li.team-row > div {
+    height: 62px; }
+  /* line 30, scss/views/_index.scss */
+  li.team-row.high div.team-name {
+    background-color: #020202; }
+  /* line 36, scss/views/_index.scss */
+  li.team-row.medium div.team-revenue, li.team-row.low div.team-revenue {
+    background-color: #f2f2f2; }
+  /* line 40, scss/views/_index.scss */
+  li.team-row.medium div.team-stability, li.team-row.low div.team-stability {
+    background-color: #f9f9f9; }
+  /* line 44, scss/views/_index.scss */
+  li.team-row.medium div.team-urgency, li.team-row.low div.team-urgency {
+    background-color: #e5e5e5; }
+  /* line 50, scss/views/_index.scss */
+  li.team-row.medium div.team-name {
+    background-color: #bfbfbf; }
+  /* line 54, scss/views/_index.scss */
+  li.team-row.low div.team-name {
+    background-color: #e5e5e5; }
+  /* line 60, scss/views/_index.scss */
+  li.team-row.selected div.team-revenue {
+    background-color: #cccccc; }
+  /* line 64, scss/views/_index.scss */
+  li.team-row.selected div.team-stability {
+    background-color: #b2b2b2; }
+  /* line 68, scss/views/_index.scss */
+  li.team-row.selected div.team-urgency {
+    background-color: #bfbfbf; }
 
-/* line 27, scss/views/_index.scss */
-li.team-row > div {
-  height: 62px; }
-
-/* line 31, scss/views/_index.scss */
-li.team-row.high div.team-name {
-  background-color: #020202; }
-
-/* line 35, scss/views/_index.scss */
-li.team-row.medium div.team-name {
-  background-color: #bfbfbf; }
-
-/* line 39, scss/views/_index.scss */
-li.team-row.low div.team-name {
-  background-color: #e5e5e5; }
-
-/* line 43, scss/views/_index.scss */
-li.team-row.selected div.team-revenue {
-  background-color: #cccccc; }
-
-/* line 47, scss/views/_index.scss */
-li.team-row.medium div.team-revenue, li.team-row.low div.team-revenue {
-  background-color: #f2f2f2; }
-
-/* line 51, scss/views/_index.scss */
-li.team-row.selected div.team-stability {
-  background-color: #b2b2b2; }
-
-/* line 55, scss/views/_index.scss */
-li.team-row.medium div.team-stability, li.team-row.low div.team-stability {
-  background-color: #f9f9f9; }
-
-/* line 59, scss/views/_index.scss */
-li.team-row.selected div.team-urgency {
-  background-color: #bfbfbf; }
-
-/* line 63, scss/views/_index.scss */
-li.team-row.medium div.team-urgency, li.team-row.low div.team-urgency {
-  background-color: #e5e5e5; }
-
-/* line 68, scss/views/_index.scss */
+/* line 76, scss/views/_index.scss */
 li.member-row {
   margin-top: 1px; }
 
-/* line 72, scss/views/_index.scss */
+/* line 80, scss/views/_index.scss */
 li.member-row > div {
   height: 40px; }
 
-/* line 84, scss/views/_index.scss */
+/* line 94, scss/views/_index.scss */
 li.member-row.high div.member-name {
   background-color: #B70A0A; }
-
-/* line 88, scss/views/_index.scss */
+/* line 98, scss/views/_index.scss */
 li.member-row div.member-revenue {
   background-color: #f2f2f2; }
-
-/* line 92, scss/views/_index.scss */
+/* line 102, scss/views/_index.scss */
 li.member-row div.member-stability {
   background-color: #f9f9f9; }
-
-/* line 96, scss/views/_index.scss */
+/* line 106, scss/views/_index.scss */
 li.member-row div.member-urgency {
   background-color: #e5e5e5; }
-
-/* line 101, scss/views/_index.scss */
+/* line 112, scss/views/_index.scss */
 li.member-row.selected div.member-revenue {
   background-color: #FCA3A3; }
-
-/* line 105, scss/views/_index.scss */
+/* line 116, scss/views/_index.scss */
 li.member-row.selected div.member-stability {
   background-color: #E96565; }
-
-/* line 109, scss/views/_index.scss */
+/* line 120, scss/views/_index.scss */
 li.member-row.selected div.member-urgency {
   background-color: #B70A0A; }
 
-/* line 113, scss/views/_index.scss */
-div.member-details {
+/* line 126, scss/views/_index.scss */
+li.member-opening div.member-details {
   background-color: #e5e5e5;
   border: 1px solid #B70A0A;
   height: 160px; }
